@@ -1,0 +1,311 @@
+*
+{
+    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+  
+
+  
+  /* .title{
+      position: absolute;
+      bottom: 600px;
+      text-align: center;
+      left: 1400px;
+      font-size: 70px;
+      color:black;
+      z-index: 2;
+
+  } */
+
+  video
+  {
+      position: relative;
+      margin: 0;
+      z-index: 1;
+      width: 100%;
+      height: 80%;
+      overflow: hidden;
+  }
+
+  
+
+  #information
+  {
+      position: absolute;
+      z-index: 2;
+      bottom: 660px;
+      left: 45%;
+      font-size: 67px;
+      
+  }
+
+   #Write-1
+   {
+    position: absolute;
+    z-index: 2;
+    top: 44%;
+    left: 47%;
+    font-size: 45px;
+    animation: slide 2s ease-in-out;
+    color: gray;
+   }
+
+   #Write-2
+   {
+        position: absolute;
+        font-size: 130px;
+        left: 37%;
+        animation: WriteSlide 6s ease-out;
+   }
+   
+
+   @keyframes WriteSlide 
+   {
+       from
+       {
+           left: 28%;
+       }
+   
+       to
+       {
+            left: 37%;
+       }
+   }
+
+
+   #Mark_1
+   {
+       background-color: green;
+       color: white;
+   }
+
+
+   iframe
+   {
+       position: absolute;
+       margin-top: 5%;
+        width: 100%;
+        height: 100%;
+   }
+  
+
+   
+/* .gnb-menu
+{
+    position: absolute;
+    bottom: 500px;
+    font-size: 30px;
+    display:inline-block;
+    align-items: center;
+    left: 1350px;
+    padding: 20px;
+
+}
+
+.gnb-menu a 
+{
+    font-size: 35px;
+    text-decoration: none;
+    color: black;
+    padding:30px 10px;
+    position: relative;
+    margin: 0;
+}
+.gnb-menu a::after {
+
+    content: "";
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-52%);
+    width: 0;
+    height: 10px;
+    background: black;
+    transition: all .5s ease-in;
+}
+
+
+ 
+.gnb-menu a:hover::after{
+    width:100%;
+}
+ */
+
+
+
+ .titlemenu
+ {
+     position: fixed;
+     display: flex;
+     background-color: black;
+     height: 100px;
+     width: 100%;
+     z-index: 3;
+     overflow: hidden;
+ }
+
+
+.titlemenu li
+{
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    padding: 30px;
+    position: relative;   
+    margin-bottom: 0px;
+    left: 700px;
+   
+} 
+
+
+.titlemenu li::after {
+
+    content: "";
+    position:absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-46%);
+    width: 0;
+    height: 5px;
+    background: white;
+    transition: all .5s ease-in;
+}
+
+
+ 
+.titlemenu li:hover::after{
+    width:100%;
+}
+
+.titlemenu a
+{
+    text-decoration: none;
+    color: white;
+} 
+
+
+
+.newsmain
+{
+    color: white;
+    margin-top: 30px;
+    font-size: 30px;
+    justify-content: flex-start;
+    display: fixed;
+    width: 600px;
+}
+
+
+@keyframes slide 
+{
+    from
+    {
+        top: 35%;
+    }  
+    to
+    {
+        top: 44%;
+    }  
+}
+
+
+
+.gallerylist
+{
+    position: relative;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow: hidden;
+}
+
+#developer_ul
+{
+    font-size:0;
+    margin-top: 19%;
+    margin-bottom: 10%;
+}
+
+#developer_ul > li
+{
+    display: inline-block;
+    vertical-align: top; /*인라인의 새로 정렬*/
+    width: 33.3%;
+
+}
+
+#developer_ul > li > a
+{
+    display: block;
+    width: auto; /*유동적인 가로값*/
+    text-decoration: none;
+    margin: 5px; /*요소의 외부간격*/
+}
+
+#developer_ul > li > a > .screen
+{
+    position: relative; /*기준을 세워둠*/
+    overflow: hidden;
+}
+
+#developer_ul > li > a .screen .top
+{
+    position: absolute;
+    bottom: 150%; /*relative 이래로 150%*/
+    left:30px; /* relative왼쪽으로부터 위치*/
+    z-index: 2;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 900; /* 폰트의 두께 */
+    transition: all .35s;
+    margin-left: 34%;
+}
+
+#developer_ul > li > a .screen .bottom
+{
+    position: absolute;
+    top: 150%;
+    left: 50px;
+    z-index: 2;
+    color: #fff;
+    font-size: 25px;
+    transition: all .35s;
+    margin-left: 35%;
+}
+
+#developer_ul > li > a .screen img
+{
+    width: 30%;
+    margin-left: 230px;
+}
+
+#developer_ul > li > a h3{
+    font-size: 30px;
+    text-align: center;
+    padding:10px;
+    color: black;
+}
+
+#developer_ul > li > a:hover .top {bottom: 52%;}
+#developer_ul > li > a:hover .bottom{top:52%;}
+
+#developer_ul > li > a .screen::after
+{
+    content: '';
+    display:inline-block;
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+    opacity: 0;
+    transition: all .35s;
+}
+
+#developer_ul > li > a:hover .screen::after
+{
+    opacity: 1;
+}
