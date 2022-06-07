@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+<title>HTML iframe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Do Hyeon', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+    .nav {
+        height: 70px;
+        border-bottom: 1px solid black;
+        display: flex;
+        align-items:center;
+        background-color:black;
+        color:white;
+    }
+    .nav-right-items{
+        display:flex;
+        margin-left: 70%;
+        overflow: auto;
+    }
+
+    .nav-item{
+        margin-left:20px;
+        color:white;
+        cursor: pointer;
+    }
+    .nva-item:hover{
+        background-color: darkorange;
+        color: white;
+    }
+    
+    div a {
+    display: block;
+    color: white;
+  font-size:25px;
+  text-decoration-line: none;
+}
+    .name{
+        margin-left: 20px;
+        font-size:30px;
+        text-align:center;
+        position:fixed;
+        animation-name: bounce,textColorAnimation;
+	animation-duration: 3s,5s;	
+    animation-iteration-count: 1,infinite;
+    }
+ div a:hover {
+    animation-name: textColorAnimation;
+	animation-duration: 5s;	
+    animation-iteration-count: infinite;
+}
+iframe {
+    margin: 0px ;
+    padding: 0px;
+}
+@keyframes textColorAnimation{
+    0% { color : blue;}
+    30% { color : green;}
+    60% { color : yellowgreen;}
+    100% { color: red;}
+}
+@keyframes bounce {
+	0% {
+		transform: translateY(0%) scaleY(0.6);
+	}
+	60%{
+		transform: translateY(-100%) scaleY(1.1);
+	}
+	90%{
+		transform: translateY(0%) scaleY(0.95) scaleX(1);
+	}				
+	100%{
+		transform: translateY(0%) scaleY(1) scaleX(1);
+	}	
+}
+</style>
+
+<body>
+    <div class="nav">
+        <div class="name">
+            통증 약 조회
+        </div>
+        <div class="nav-right-items">
+		<div class=nav-item><a href="./index.html">메인으로</a></div>
+        <div class=nav-item><a href="home.html" target="myframe">HOME</a></div>
+        <div class=nav-item><a href="두통.html" target="myframe">두통</a></div>
+        <div class=nav-item><a href="생리통.html" target="myframe">생리통</a></div>
+        <div class=nav-item><a href="근육통.html" target="myframe">근육통</a></div>
+        <div class=nav-item><a href="복통.html" target="myframe">복통</a></div>
+        <div class=nav-item><a href="상처약.html" target="myframe">바르는약</a></div>
+    </div>
+    </div>
+	<iframe width="100%" height="893.4" src="home.html" name="myframe" frameborder="0"></iframe>
+</body>
+
+</html>
